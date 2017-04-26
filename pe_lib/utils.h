@@ -1,6 +1,7 @@
 #pragma once
 #include <istream>
 #include <string>
+#include <algorithm>
 #include "stdint_defs.h"
 #include "pe_structures.h"
 
@@ -23,7 +24,7 @@ public:
 		return false;
 	}
 
-	//Helper template function to strip nullbytes in the end of string
+	//Helper template function to strip in the end of string
 	template<typename T>
 	static void strip_nullbytes(std::basic_string<T>& str)
 	{
